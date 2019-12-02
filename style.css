@@ -1,0 +1,97 @@
+body {
+  background-color: black;
+}
+
+.smoke {
+  position:fixed;
+  display: block;
+  background:url(smoke.png) no-repeat center center/100% 100%;
+
+}
+
+.smoke:nth-of-type(1) {
+  height:200%;
+  width:100%;
+  top:0;
+  right:10%;
+  -moz-animation:move 500s linear infinite alternate, fade 80s linear infinite alternate;
+  -webkit-animation:move 500s linear infinite alternate, fade 80s linear infinite alternate;
+  animation:move 500s linear infinite alternate,  fade 80s linear infinite alternate;
+  -moz-transform-origin:left center;
+  -webkit-transform-origin:left center;
+  transform-origin: left center;
+}
+
+.smoke:nth-of-type(2) {
+  height:200%;
+  width:200%;
+  top:-100%;
+  right:-20%;
+  -moz-animation:move 330s  linear infinite alternate, fade 150s linear infinite alternate;
+  -webkit-animation:move 330s  linear infinite alternate, fade 150s linear infinite alternate;
+  animation:move 330s  linear infinite alternate, fade 150s linear infinite alternate;
+  -moz-transform-origin:center right;
+  -webkit-transform-origin:center right;
+  transform-origin: center right;
+}
+
+.smoke:nth-of-type(3) {
+  height:150%;
+  width:150%;
+  top:-20%;
+  right:5%;
+  -moz-animation:move 400s linear infinite alternate, fade 200s linear infinite alternate;
+  -webkit-animation:move 400s linear infinite alternate, fade 200s linear infinite alternate;
+  animation:move 400s linear infinite alternate, fade 200s  linear infinite alternate;
+  -moz-transform-origin:center center;
+  -webkit-transform-origin:center center;
+  transform-origin: center center;
+}
+@-webkit-keyframes move {
+  0% {
+    transform: scale(0.8, 0.5) translate(5%, 60%) rotate(0deg);
+  }
+  100% {
+    transform: scale(2, 2.5) translate(-5%, 0%) rotate(360deg);
+  }
+}
+@-moz-keyframes move {
+  0% {
+    transform: scale(0.8, 0.5) translate(5%, 60%) rotate(0deg);
+  }
+  100% {
+    transform: scale(2, 2.5) translate(-5%, 0%) rotate(360deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: scale(0.8, 0.5) translate(5%, 60%) rotate(0deg);
+  }
+  100% {
+    transform: scale(2, 2.5) translate(-5%, 0%) rotate(360deg);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+		opacity:0.1;
+		}
+	100% {
+		opacity:0.25;
+		}
+}
+@-moz-keyframes fade {
+  0% {
+		opacity:0.1;
+		}
+	100% {
+		opacity:0.25;
+		}
+}
+@keyframes fade {
+  0% {
+		opacity:0.1;
+		}
+	100% {
+		opacity:0.25;
+		}
+}
